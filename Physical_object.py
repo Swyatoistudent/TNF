@@ -29,7 +29,7 @@ class Physical_object(Game_object):
 
     @property
     def position(self):
-        return self.position
+        return self._position
 
     @position.setter
     def position(self, new_position):
@@ -40,7 +40,7 @@ class Physical_object(Game_object):
 
     @property
     def size(self):
-        return self.position
+        return self._size
 
     @size.setter
     def size(self, new_size):
