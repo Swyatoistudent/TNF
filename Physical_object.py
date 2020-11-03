@@ -11,7 +11,7 @@ class Physical_object(Game_object):
     def __init__(self, id: int, position: [float, float]):
         if game_objects_data[id]['type'] != 'Physical_object':
             pass
-            # raise ObjectTypeException
+            # raise ObjectTypeError
         self._id = id
         self._position = position
         self._size = game_objects_data[id]['size']
