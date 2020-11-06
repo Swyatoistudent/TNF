@@ -50,3 +50,7 @@ class PhysicalObject(GameObject):
             self._size = new_size
         else:
             raise ValueError(f'Can\'t create size from type {type(new_size)}')
+
+    def get_sprite(self):
+        # getting sprite of PhysicalObject
+        return game_objects_data[id]['sprite']
