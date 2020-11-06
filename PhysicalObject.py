@@ -8,10 +8,10 @@ import IRenderable
 
 # game_objects_data = { id: { 'type': 'PhysicalObject', ....}, ....}
 
-class PhysicalObject(GameObject):
+class PhysicalObject(GameObject, IRenderable):
 
-    def __init__(self, id: int, position: [int, int]):
-        if game_objects_data[id]['type'] != type(self).__name__:
+    def __init__(self, id: int, position: [int, int], type_name='PhysicalObject'):
+        if game_objects_data[id]['type'] != type_name:
             pass
             # raise ObjectTypeError
         self._id = id
