@@ -1,6 +1,6 @@
 class Collision:
 
-    def __init__(self, damage: int, collision_effect):
+    def __init__(self, damage: int, collision_effect, direction: [int, int]):
         self.__damage = damage
         self.__collision_effect = collision_effect
 

@@ -1,5 +1,6 @@
 from abc import ABCMeta, abstractmethod
 
+
 class IDamageable():
     __metaclass__ = ABCMeta
 
