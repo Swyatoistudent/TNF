@@ -1,15 +1,15 @@
 from typing import Any
 
-import Game_object
+import GameObject
 import Collision
 
 
-# game_objects_data = { id: { 'type': 'Physical_object', ....}, ....}
+# game_objects_data = { id: { 'type': 'PhysicalObject', ....}, ....}
 
-class Physical_object(Game_object):
+class PhysicalObject(GameObject):
 
     def __init__(self, id: int, position: [float, float]):
-        if game_objects_data[id]['type'] != 'Physical_object':
+        if game_objects_data[id]['type'] != 'PhysicalObject':
             pass
             # raise ObjectTypeError
         self._id = id
@@ -20,8 +20,8 @@ class Physical_object(Game_object):
     # def get_id(self) -> int:
     #     return self._id
 
-    def on_collide(self, collided: Physical_object, direction: int):
-        if self._collision.get_damage() > 0 and isinstance(collided, Moveble_object):
+    def on_collide(self, collided: PhysicalObject, direction: int):
+        if self._collision.get_damage() > 0 and isinstance(collided, MovebleObject):
             collided.damaged(self._collision.get_damage())
         temp = self._collision.get_collision_effect()
         if temp is not None:

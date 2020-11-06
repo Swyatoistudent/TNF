@@ -1,7 +1,7 @@
 import abc
 
 
-class Game_object(ABC):
+class GameObject(abc.ABC):
     _id: int
 
     def get_id(self) -> int:
