@@ -7,8 +7,8 @@ import IRenderable
 class MovableObject(PhysicalObject):
     _velocity_vector: List[Any]
 
-    def __init__(self, id: int, position: [float, float]):
-        super(MovableObject, self).__init__(id, position)
+    def __init__(self, id: int, position: [int, int], type_name="MovableObject"):
+        super(MovableObject, self).__init__(id, position, type_name=type_name)
         self._max_hp = game_objects_data[id]['max_hp']
         self._hp = self._max_hp
         self._speed = game_objects_data[id]['speed']
