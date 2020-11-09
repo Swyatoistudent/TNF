@@ -1,26 +1,29 @@
 from typing import Any
-
+from BadIdError import BadIdError
 import GameObject
 import Collision
-import MovableObject
+from MovableObject import MovableObject
 import IRenderable
 
 
 # game_objects_data = { id: { 'type': 'PhysicalObject', ....}, ....}
 
 class PhysicalObject(GameObject, IRenderable):
-
+    #DEFAULT_ID
     def __init__(self, id: int, position: [int, int], type_name='PhysicalObject'):
-        if game_objects_data[id]['type'] != type_name:
+        try:
+            if game_objects_data[id]['type'] != type_name:
+                raise BadIdError(id)
+                # raise ObjectTypeError
+            self._id = id
+
+        except BadIdError:
             pass
-            # raise ObjectTypeError
-        self._id = id
+            #id = default id for physiscal obj
         self._position = position
         self._size = game_objects_data[id]['size']
         self._collision = game_objects_data[id]['collision']
 
-    # def get_id(self) -> int:
-    #     return self._id
 
     def on_collide(self, collided: 'PhysicalObject', direction: [int, int]):
         if self._collision.get_damage() > 0 and isinstance(collided, MovableObject):
