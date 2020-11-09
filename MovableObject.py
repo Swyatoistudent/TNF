@@ -30,3 +30,11 @@ class MovableObject(PhysicalObject):
         self._position = [self._position[i]
                           + self._speed * self._velocity_vector[i]
                           for i in range(2)]
+
+    @property
+    def hp(self):
+        return self._hp
+
+    @property
+    def max_hp(self):
+        return self._max_hp
