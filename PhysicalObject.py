@@ -4,8 +4,6 @@ import GameObject
 import Collision
 from MovableObject import MovableObject
 import IRenderable
-
-
 # game_objects_data = { id: { 'type': 'PhysicalObject', ....}, ....}
 
 class PhysicalObject(GameObject, IRenderable):
