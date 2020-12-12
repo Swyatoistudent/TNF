@@ -18,9 +18,9 @@ def singleton(class_):
 class Game:
     FPS = 60
 
-    def __init__(self, screen, hero, surf):
+    def __init__(self, hero, surf):
         self.__surf = surf
-        self.__screen = screen
+        self.__screen = 0
         self.__hero = hero
         self.__running = True
         self.__clock = pygame.time.Clock()
