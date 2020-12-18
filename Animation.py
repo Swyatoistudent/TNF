@@ -1,4 +1,5 @@
 from MovableObject import MovableObject
+from loader import game_objects_data
 class Animation:
     def __init__(self):
         self.__counter = 0

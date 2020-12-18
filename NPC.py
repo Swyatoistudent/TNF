@@ -1,5 +1,7 @@
 from MovableObject import MovableObject
 import IDamageable
+from loader import game_objects_data
+
 
 
 class NPC(MovableObject, IDamageable):

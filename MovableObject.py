@@ -2,6 +2,7 @@ from typing import List, Any
 
 import PhysicalObject
 import IRenderable
+from loader import game_objects_data
 
 
 class MovableObject(PhysicalObject):
