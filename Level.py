@@ -1,4 +1,5 @@
 import random
+from Room import Room
 
 
 class Level:
@@ -9,7 +10,7 @@ class Level:
 
     def get_map(self):
         return [
-            [random.choice(self.__rooms), random.choice(self.__rooms), random.choice(self.__rooms)],
-            [random.choice(self.__rooms), random.choice(self.__rooms), random.choice(self.__rooms)],
-            [random.choice(self.__rooms), random.choice(self.__rooms), random.choice(self.__rooms)],
+            [Room(random.choice(self.__rooms)), Room(random.choice(self.__rooms)), Room(random.choice(self.__rooms))],
+            [Room(random.choice(self.__rooms)), Room(random.choice(self.__rooms)), Room(random.choice(self.__rooms))],
+            [Room(random.choice(self.__rooms)), Room(random.choice(self.__rooms)), Room(random.choice(self.__rooms))],
         ]
