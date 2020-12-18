@@ -14,7 +14,7 @@ class Hero(MovableObject, IDamageable):
         self.max_ammo_mod = game_objects_data[id]['max_ammo_mod']
         self.damage_mod = game_objects_data[id]['damage_mod']
         self.control = game_objects_data[id]['control']
-        self.armor = game_onjects_data[id]['armor']
+        self.armor = game_objects_data[id]['armor']
 
     def get_info(self):
         return [self.max_hp, self.hp, self.armor, self.weapons, self.current_weapon, self.active_items]

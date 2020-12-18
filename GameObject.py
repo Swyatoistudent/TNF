@@ -1,5 +1,5 @@
 import abc
-from Loader import game_objects_data
+from loader import game_objects_data
 
 
 class GameObject(abc.ABC):

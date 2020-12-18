@@ -16,6 +16,7 @@ class MovableObject(PhysicalObject):
         self._velocity_vector = [0, 0]
         self.drop = game_objects_data[id]['drop']
         self.animation = game_objects_data[id]['animation']
+        self._position = position
 
     def is_collided(self, collided: [PhysicalObject], direction: [int, int]):
         for coll in collided:
@@ -39,3 +40,7 @@ class MovableObject(PhysicalObject):
     @property
     def max_hp(self):
         return self._max_hp
+
+    @property
+    def velocity_vector(self):
+        return self._velocity_vector
