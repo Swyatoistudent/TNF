@@ -1,7 +1,7 @@
 class Room:
     def __init__(self, id: int):
         self.__id = id
-        self.__description = game_objects_data[id]['room']
+        self.__description = game_objects_data[id]['room_description']
 
     @property
     def description(self):
