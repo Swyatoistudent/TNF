@@ -1,0 +1,3 @@
+
+
+def biter(npc):

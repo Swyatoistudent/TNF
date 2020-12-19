@@ -1,5 +1,7 @@
 import Item
 from Hero import Hero
+from loader import game_objects_data
+
 
 class PassiveItem (Item):
     def __init__(self, ammo_mod: int, damage_mod: int, hp_mod: int):
