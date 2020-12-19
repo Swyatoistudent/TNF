@@ -1,5 +1,7 @@
 from MovableObject import MovableObject
 from loader import game_objects_data
+
+
 class Animation:
     def __init__(self):
         self.__counter = 0
@@ -7,8 +9,8 @@ class Animation:
         self.__current_sprite = self.__sprites['idle']
 
     def get_animation_move(self, velocity_vector: [float, float]):
-        if self.__counter >=60:
-            self.__counter=0
+        if self.__counter >= 60:
+            self.__counter = 0
         if velocity_vector == [0, 0]:
             self.__counter = 0
             self.__current_sprite = self.__sprites['idle']

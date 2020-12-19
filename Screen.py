@@ -13,8 +13,8 @@ class Screen:
         pass
 
     def render(self):
-        self.__surf.blit(self.__background,)
+        self.__surf.blit(self.__background, 0, 0)
         for obj in self.__static:
-            self.__surf.blits(zip(obj.animation.get_animation_move(obj.velocity_vector), obj.position))
+            self.__surf.blits(zip(obj.animation.get_sprite(), obj.position))
         for obj in self.__dynamic:
             self.__surf.blits(zip(obj.animation.get_animation_move(obj.velocity_vector), obj.position))

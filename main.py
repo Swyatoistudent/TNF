@@ -5,7 +5,7 @@ from Game import Game
 
 def start_the_game():
     #menu.mainloop(surface, disable_loop=True)
-    game = Game(surface)
+    game = Game(surface, )
 
 
 
