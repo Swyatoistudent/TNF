@@ -3,7 +3,7 @@ from loader import game_objects_data
 
 
 class Animation:
-    def __init__(self):
+    def __init__(self,id):
         self.__counter = 0
         self.__sprites = game_objects_data[id]['sprites']
         self.__current_sprite = self.__sprites['idle']
