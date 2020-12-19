@@ -2,15 +2,16 @@ from typing import List
 from MovableObject import MovableObject
 import IDamageable
 from loader import game_objects_data
-
+from PassiveItem import PassiveItem
+from ActiveItem import ActiveItem
 
 class Hero(MovableObject, IDamageable):
     def __init__(self, id: int, position: [int, int], type_name='Hero'):
         super(Hero, self).__init__(id, position, type_name=type_name)
         self.weapons = game_objects_data[id]['weapons']
-        self.current_weapon = game_objects_data[id]['currnet_weapon']
-        self.passiv_items = game_objects_data[id]['passiv_itemes']
-        self.active_item = game_objects_data[id]['active_items']
+        self.current_weapon = self.weapons[0]
+        self.passiv_items = PassiveItem(game_objects_data[id]['passiv_itemes'])
+        self.active_item = ActiveItem(game_objects_data[id]['active_items'])
         self.max_ammo_mod = game_objects_data[id]['max_ammo_mod']
         self.damage_mod = game_objects_data[id]['damage_mod']
         self.control = game_objects_data[id]['control']

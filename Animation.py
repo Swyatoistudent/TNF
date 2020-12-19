@@ -1,6 +1,6 @@
 from MovableObject import MovableObject
 from loader import game_objects_data
-
+import os
 
 class Animation:
     def __init__(self,id):
@@ -15,15 +15,15 @@ class Animation:
             self.__counter = 0
             self.__current_sprite = self.__sprites['idle']
         if velocity_vector == [1, 0]:
-            self.__current_sprite = self.__sprites["right"][self.__counter // (60 / len(self.__sprites["right"]))]
+            self.__current_sprite = os.listdir(self.__sprites["right"])[self.__counter // (60 / len(self.__sprites["right"]))]
             self.__counter += 1
         if velocity_vector == [-1, 0]:
-            self.__current_sprite = self.__sprites["left"][self.__counter // (60 / len(self.__sprites["right"]))]
+            self.__current_sprite = os.listdir(self.__sprites["left"])[self.__counter // (60 / len(self.__sprites["left"]))]
             self.__counter += 1
         if velocity_vector == [0, 1]:
-            self.__current_sprite = self.__sprites["up"][self.__counter // (60 / len(self.__sprites["right"]))]
+            self.__current_sprite =  os.listdir(self.__sprites["up"])[self.__counter // (60 / len(self.__sprites["up"]))]
             self.__counter += 1
         if velocity_vector == [0, -1]:
-            self.__current_sprite = self.__sprites["down"][self.__counter // (60 / len(self.__sprites["right"]))]
+            self.__current_sprite =  os.listdir(self.__sprites["down"])[self.__counter // (60 / len(self.__sprites["down"]))]
             self.__counter += 1
         return self.__current_sprite

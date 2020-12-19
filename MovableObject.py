@@ -1,5 +1,5 @@
 from typing import List, Any
-
+from Animation import Animation
 import PhysicalObject
 import IRenderable
 from loader import game_objects_data
@@ -15,7 +15,7 @@ class MovableObject(PhysicalObject):
         self._speed = game_objects_data[id]['speed']
         self._velocity_vector = [0, 0]
         self.drop = game_objects_data[id]['drop']
-        self.animation = game_objects_data[id]['animation']
+        self.animation = Animation(id)
         self._position = position
 
     def is_collided(self, collided: [PhysicalObject], direction: [int, int]):
