@@ -1,3 +1,3 @@
 
-
 def biter(npc):
+    pass
