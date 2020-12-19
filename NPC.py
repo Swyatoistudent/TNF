@@ -10,7 +10,7 @@ class NPC(MovableObject, IDamageable):
         self.__ai_type = game_objects_data[id]['ai_type']
 
     def ai(self):
-        ais[self.__ai_type]()
+        ais[self.__ai_type](self)
 
     def get_damage(self, damage):
         # getting damage
